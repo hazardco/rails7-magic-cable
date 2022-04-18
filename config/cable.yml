@@ -1,12 +1,10 @@
 development:
-  adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://:p7c202129ef8983c29fc6019cce3b1c9223166d83eda15255a807c2afa461ed7e@ec2-54-228-39-185.eu-west-1.compute.amazonaws.com:16400" } %>
-  channel_prefix: magic_production
+  adapter: async
 
 test:
   adapter: test
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://:p7c202129ef8983c29fc6019cce3b1c9223166d83eda15255a807c2afa461ed7e@ec2-54-228-39-185.eu-west-1.compute.amazonaws.com:16400" } %>
-  channel_prefix: magic_production
+  url: redis://:p7c202129ef8983c29fc6019cce3b1c9223166d83eda15255a807c2afa461ed7e@ec2-54-228-39-185.eu-west-1.compute.amazonaws.com:16399
+  #channel_prefix: magic_production

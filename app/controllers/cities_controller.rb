@@ -31,7 +31,7 @@ class CitiesController < ApplicationController
       if @city.save
         format.html { redirect_to new_city_url, notice: "City was successfully created." }
         format.json { render :show, status: :created, location: @city }
-        #ActionCable.server.broadcast("prueba_channel", { message: @city.city })  
+        ActionCable.server.broadcast("prueba_channel", { message: @city.city })  
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @city.errors, status: :unprocessable_entity }
