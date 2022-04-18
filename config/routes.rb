@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root "cities/resultados"
+
   get 'cities/resultados'
 
   resources :cities
