@@ -1,0 +1,9 @@
+<%= turbo_stream.prepend "cities_change" do %>
+    <div data-controller="redirect" data-redirect-url-value="<%= city.city %>">
+        A ver...
+    </div>
+<% end %>
+
+<%= turbo_stream.prepend "cities_resultados" do %>
+   <li><%= city.city %></li>
+<% end %>
