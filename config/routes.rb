@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root "cities/resultados"
+  root "cities#resultados"
 
   get 'cities/resultados'
 
